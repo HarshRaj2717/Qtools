@@ -13,6 +13,17 @@ module.exports = {
   plugins: [
     require("tailwindcss"),
     require("autoprefixer"),
+    require("@tailwindcss/typography"),
     require("daisyui"),
   ],
+  daisyui: {
+    styled: true,
+    themes: ["night", "winter"],
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: "",
+    darkTheme: "night",
+  },
 };
