@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*", "./src/**/*.{html,js}"],
+  content: ["./*", "./public/**/*.{html,js}"],
   theme: {
     screens: {
       sm: "480px",
@@ -18,7 +18,7 @@ module.exports = {
   ],
   daisyui: {
     styled: true,
-    themes: ["night", "winter"],
+    themes: ["night", "winter", "luxury"],
     base: true,
     utils: true,
     logs: true,

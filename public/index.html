@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="winter">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qtools</title>
+    <link href="output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar bg-base-300">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-300 rounded-box w-52"
+          >
+            <li>
+              <a href="./pricing.html" rel="noopener noreferrer">Pricing</a>
+            </li>
+            <li>
+              <a href="./api.html" target="_blank" rel="noopener noreferrer"
+                >API</a
+              >
+            </li>
+            <li><a href="./about.html" rel="noopener noreferrer">About</a></li>
+          </ul>
+        </div>
+        <a
+          href=""
+          rel="noopener noreferrer"
+          class="btn btn-ghost normal-case text-2xl"
+        >
+          <div class="text-primary text-5xl">Q</div>
+          tools</a
+        >
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li>
+            <a href="./pricing.html" rel="noopener noreferrer">Pricing</a>
+          </li>
+          <li>
+            <a href="./api.html" target="_blank" rel="noopener noreferrer"
+              >API</a
+            >
+          </li>
+          <li><a href="./about.html" rel="noopener noreferrer">About</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end px-1 py-1">
+        <a
+          href="./get_started.html"
+          rel="noopener noreferrer"
+          class="btn btn-primary mx-1 btn-xs lg:btn-sm md:btn-sm"
+          >Get Started</a
+        >
+        <label class="swap swap-rotate rounded-box mx-1 lg:mx-2 md:mx-2">
+          <!-- this hidden checkbox controls the state -->
+          <input
+            type="checkbox"
+            data-toggle-theme="night,winter"
+            data-act-class="ACTIVECLASS"
+          />
+
+          <!-- sun icon -->
+          <svg
+            class="swap-on fill-primary w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 512 512"
+          >
+            <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+              svg {
+                fill: #047aff;
+              }
+            </style>
+            <path
+              d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+            />
+          </svg>
+
+          <!-- moon icon -->
+          <svg
+            class="swap-off fill-primary w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+            />
+          </svg>
+        </label>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero min-h-screen bg-base-200">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <img
+          src="images/hero_image.gif"
+          class="max-w-xs lg:max-w-sm md:max-w-sm rounded-lg shadow-2xl"
+        />
+        <div>
+          <h1 class="text-5xl font-bold">Qtools!!!</h1>
+          <p class="py-6">
+            Welcome to Qtools, your ultimate hub for <u>quick tools</u>.
+            Discover a world of powerful tools designed to simplify your
+            workflow and amplify your productivity. With Qtools, resizing
+            images, converting audio to text, generating QR codes, and many more
+            are just a click away. Our extensive collection of quick tools and
+            <a
+              href="./api.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link link-primary bg-primary-content"
+              >powerful APIS</a
+            >
+            cover a wide range of tasks, ensuring you have a lot of what you
+            need in one convenient place.
+          </p>
+          <a
+            href="./get_started.html"
+            rel="noopener noreferrer"
+            class="btn btn-primary mx-1"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Paid Tools -->
+    <div class="divider text-primary text-xl">Paid Tools</div>
+    <div class="min-h-fit bg-base-100">
+      <!-- single 3 column row -->
+      <div class="flex flex-col w-full lg:flex-row px-5 my-10">
+        <div
+          class="flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+        >
+          <a
+            href="premium_tools/image-resizer.html"
+            rel="noopener noreferrer"
+            class="link link-primary"
+            >Image Resizer</a
+          >
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div
+          class="flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+        >
+          <a
+            href="premium_tools/audio-to-text-converter.html"
+            rel="noopener noreferrer"
+            class="link link-primary"
+            >Audio To Text Converter</a
+          >
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div
+          class="flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+        >
+          <a
+            href="premium_tools/video-to-mp3-converter.html"
+            rel="noopener noreferrer"
+            class="link link-primary"
+            >Video To MP3 Converter</a
+          >
+        </div>
+      </div>
+      <!-- single 3 column row -->
+      <div class="flex flex-col w-full lg:flex-row px-5 my-10">
+        <div
+          class="flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+        >
+          <a
+            href="premium_tools/image-to-text-converter.html"
+            rel="noopener noreferrer"
+            class="link link-primary"
+            >Image To Text Converter</a
+          >
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div
+          class="flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+        >
+          <a
+            href="premium_tools/subtitle-generator.html"
+            rel="noopener noreferrer"
+            class="link link-primary"
+            >Automatic Subtitles Generator</a
+          >
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div
+          class="flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+        >
+          <a
+            href="premium_tools/QR-code-generator.html"
+            rel="noopener noreferrer"
+            class="link link-primary"
+            >QR Code Generator</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Free Tools -->
+    <div class="divider text-primary text-xl">Free Tools</div>
+    <div class="min-h-fit bg-base-100">
+      <!-- single 3 column row -->
+      <div class="flex flex-col w-full lg:flex-row px-5 my-10">
+        <div
+          class="flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+        >
+          <a
+            href="free_tools/ISS-location-checker.html"
+            rel="noopener noreferrer"
+            class="link link-primary"
+            >ISS location checker</a
+          >
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div
+          class="flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+        >
+          Coming Soon...
+        </div>
+        <div class="divider lg:divider-horizontal"></div>
+        <div
+          class="flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+        >
+          Coming Soon...
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+  </body>
+</html>
