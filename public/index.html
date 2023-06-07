@@ -329,8 +329,27 @@
                 rel="noopener noreferrer"
                 class="link link-primary"
                 >GitHub</a
-              >. I am also open to contributions, so feel free to start an issue
-              or open a PR.
+              >. I am regularly trying to improve the site and add more
+              features, so feel free to start an issue for either the
+              <a
+                class="link link-primary"
+                href="https://github.com/HarshRaj2717/Qtools/issues/new"
+                target="_blank"
+                rel="noopener noreferrer"
+                >website</a
+              >
+              or the
+              <a
+                class="link link-primary"
+                href="https://github.com/HarshRaj2717/Qtools-API/issues/new"
+                target="_blank"
+                rel="noopener noreferrer"
+                >API</a
+              >. <br />
+              Also, I have kept the pricing very minimal to support the costs
+              that might come from hosting. If you want to support, then please
+              do purchase a plan; otherwise, you can also deploy your own Qtools
+              website by forking my repo.
             </p>
             <h1 class="text-lg font-semibold py-3">
               Designed & Built with ❤️ by
@@ -348,5 +367,60 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer
+      class="footer footer-center p-10 bg-base-300 text-base-content rounded"
+    >
+      <div class="grid grid-flow-col gap-4">
+        <a
+          class="link link-hover"
+          href="https://github.com/HarshRaj2717/Qtools"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        <a
+          class="link link-hover"
+          href="./api.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >API</a
+        >
+      </div>
+      <div class="grid grid-flow-col gap-4">
+        <a
+          class="link link-hover"
+          href="http://hraj.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          >About me</a
+        >
+        <a
+          class="link link-hover"
+          href="https://hraj.dev/contact"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Contact</a
+        >
+        <a
+          class="link link-hover"
+          href="https://www.linkedin.com/in/harshraj2717/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+      </div>
+      <div>
+        <p>
+          Copyright © <span id="year"></span> - All right reserved by Harsh Raj
+        </p>
+      </div>
+    </footer>
+
+    <!-- Finding current year and writing it to the footer's copyright text -->
+    <script>
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
