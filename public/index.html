@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qtools</title>
-    <link href="output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   </head>
@@ -40,7 +41,7 @@
               <a href="#tools" rel="noopener noreferrer">All Tools</a>
             </li>
             <li>
-              <a href="./pricing.html" rel="noopener noreferrer">Pricing</a>
+              <a href="#pricing" rel="noopener noreferrer">Pricing</a>
             </li>
             <li>
               <a href="./api.html" target="_blank" rel="noopener noreferrer"
@@ -77,7 +78,7 @@
             <a href="#tools" rel="noopener noreferrer">All Tools</a>
           </li>
           <li>
-            <a href="./pricing.html" rel="noopener noreferrer">Pricing</a>
+            <a href="#pricing" rel="noopener noreferrer">Pricing</a>
           </li>
           <li>
             <a href="./api.html" target="_blank" rel="noopener noreferrer"
@@ -150,8 +151,9 @@
         <div>
           <h1 class="text-5xl font-bold">Qtools!!!</h1>
           <p class="py-6">
-            Welcome to Qtools, your ultimate hub for <u>quick tools</u>.
-            Discover a world of powerful tools designed to simplify your
+            Welcome to Qtools, your ultimate hub for
+            <a href="#tools" rel="noopener noreferrer"><u>quick tools</u></a
+            >. Discover a world of powerful tools designed to simplify your
             workflow and amplify your productivity. With Qtools, resizing
             images, converting audio to text, generating QR codes, and many more
             are just a click away. Our extensive collection of quick tools and
@@ -160,7 +162,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="link link-primary bg-primary-content"
-              >powerful APIS</a
+              >powerful APIs</a
             >
             cover a wide range of tasks, ensuring you have a lot of what you
             need in one convenient place.
@@ -175,8 +177,8 @@
       </div>
     </div>
 
-    <!-- Paid Tools -->
-    <div id="tools" class="divider text-primary text-xl">Paid Tools</div>
+    <!-- All Tools -->
+    <div id="tools" class="divider text-primary text-2xl">All Tools</div>
     <div class="min-h-fit bg-base-100">
       <!-- single 3 column row -->
       <div class="flex flex-col w-full lg:flex-row px-5 my-10">
@@ -184,51 +186,48 @@
           href="premium_tools/image-resizer.html"
           rel="noopener noreferrer"
           class="btn btn-outline flex-grow grid h-20 bg-base-300 rounded-box place-items-center"
-          >Image Resizer</a
+          >👑 Image Resizer</a
         >
         <div class="divider lg:divider-horizontal"></div>
         <a
           href="premium_tools/audio-to-text-converter.html"
           rel="noopener noreferrer"
           class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >Audio To Text Converter</a
+          >👑 Audio To Text Converter</a
         >
         <div class="divider lg:divider-horizontal"></div>
         <a
           href="premium_tools/video-to-mp3-converter.html"
           rel="noopener noreferrer"
           class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >Video To MP3 Converter</a
+          >👑 Video To MP3 Converter</a
         >
       </div>
+
       <!-- single 3 column row -->
       <div class="flex flex-col w-full lg:flex-row px-5 my-10">
         <a
           href="premium_tools/image-to-text-converter.html"
           rel="noopener noreferrer"
           class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >Image To Text Converter</a
+          >👑 Image To Text Converter</a
         >
         <div class="divider lg:divider-horizontal"></div>
         <a
           href="premium_tools/subtitle-generator.html"
           rel="noopener noreferrer"
           class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >Automatic Subtitles Generator</a
+          >👑 Automatic Subtitles Generator</a
         >
         <div class="divider lg:divider-horizontal"></div>
         <a
           href="premium_tools/QR-code-generator.html"
           rel="noopener noreferrer"
           class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >QR Code Generator</a
+          >👑 QR Code Generator</a
         >
       </div>
-    </div>
 
-    <!-- Free Tools -->
-    <div class="divider text-primary text-xl">Free Tools</div>
-    <div class="min-h-fit bg-base-100">
       <!-- single 3 column row -->
       <div class="flex flex-col w-full lg:flex-row px-5 my-10">
         <a
@@ -255,6 +254,53 @@
       </div>
     </div>
 
-    <!--  -->
+    <!-- Pricing -->
+    <div id="pricing" class="bg-base-200">
+      <div id="tools" class="divider text-primary text-2xl bg-base-200 pt-5">
+        Pricing
+      </div>
+      <div
+        class="stats stats-vertical bg-base-200 min-w-full lg:stats-horizontal shadow"
+      >
+        <div class="stat">
+          <div class="stat-title">Free</div>
+          <div class="stat-value">
+            Rs. 0 <span class="text-sm font-light align-middle">/ month</span>
+          </div>
+          <div class="stat-desc text-sm">
+            - Monthly File Transfer Limit: 100mb
+          </div>
+          <div class="stat-desc text-sm">- Montlhy API calls: 25</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-title">👑 Pro</div>
+          <div class="stat-value">
+            Rs. 10 <span class="text-sm font-light align-middle">/ month</span>
+          </div>
+          <div class="stat-desc text-sm">
+            + Monthly File Transfer Limit: 200mb
+          </div>
+          <div class="stat-desc text-sm">+ Montlhy API calls: 100</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-title">👑 Unlimited</div>
+          <div class="stat-value">
+            Rs. 50 <span class="text-sm font-light align-middle">/ month</span>
+          </div>
+          <div class="stat-desc text-sm">
+            ++ Monthly File Transfer Limit: Unlimited
+          </div>
+          <div class="stat-desc text-sm">++ Montlhy API calls: Unlimited</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <!-- <div id="about" class="bg-base-100">
+      
+
+    </div> -->
   </body>
 </html>
