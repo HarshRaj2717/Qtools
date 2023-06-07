@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qtools</title>
     <link rel="stylesheet" href="output.css" />
-    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   </head>
@@ -48,7 +47,7 @@
                 >API</a
               >
             </li>
-            <li><a href="./about.html" rel="noopener noreferrer">About</a></li>
+            <li><a href="#about" rel="noopener noreferrer">About</a></li>
             <li>
               <a
                 href="./get_started.html"
@@ -86,7 +85,7 @@
             >
           </li>
           <li>
-            <a href="./about.html" rel="noopener noreferrer">About</a>
+            <a href="#about" rel="noopener noreferrer">About</a>
           </li>
         </ul>
       </div>
@@ -178,89 +177,97 @@
     </div>
 
     <!-- All Tools -->
-    <div id="tools" class="divider text-primary text-2xl">All Tools</div>
-    <div class="min-h-fit bg-base-100">
-      <!-- single 3 column row -->
-      <div class="flex flex-col w-full lg:flex-row px-5 my-10">
-        <a
-          href="premium_tools/image-resizer.html"
-          rel="noopener noreferrer"
-          class="btn btn-outline flex-grow grid h-20 bg-base-300 rounded-box place-items-center"
-          >👑 Image Resizer</a
-        >
-        <div class="divider lg:divider-horizontal"></div>
-        <a
-          href="premium_tools/audio-to-text-converter.html"
-          rel="noopener noreferrer"
-          class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >👑 Audio To Text Converter</a
-        >
-        <div class="divider lg:divider-horizontal"></div>
-        <a
-          href="premium_tools/video-to-mp3-converter.html"
-          rel="noopener noreferrer"
-          class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >👑 Video To MP3 Converter</a
-        >
+    <div id="tools" class="bg-base-300 p-1">
+      <div class="divider text-primary text-2xl bg-base-300 pt-4">
+        All Tools
       </div>
+      <div class="min-h-fit bg-base-300 pb-5">
+        <!-- single 3 column row -->
+        <div class="flex flex-col w-full lg:flex-row px-5 my-10">
+          <a
+            href="premium_tools/image-resizer.html"
+            rel="noopener noreferrer"
+            class="btn btn-outline flex-grow grid h-20 bg-base-300 rounded-box place-items-center"
+            >👑 Image Resizer</a
+          >
+          <div class="divider lg:divider-horizontal"></div>
+          <a
+            href="premium_tools/audio-to-text-converter.html"
+            rel="noopener noreferrer"
+            class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+            >👑 Audio To Text Converter</a
+          >
+          <div class="divider lg:divider-horizontal"></div>
+          <a
+            href="premium_tools/video-to-mp3-converter.html"
+            rel="noopener noreferrer"
+            class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+            >👑 Video To MP3 Converter</a
+          >
+        </div>
 
-      <!-- single 3 column row -->
-      <div class="flex flex-col w-full lg:flex-row px-5 my-10">
-        <a
-          href="premium_tools/image-to-text-converter.html"
-          rel="noopener noreferrer"
-          class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >👑 Image To Text Converter</a
-        >
-        <div class="divider lg:divider-horizontal"></div>
-        <a
-          href="premium_tools/subtitle-generator.html"
-          rel="noopener noreferrer"
-          class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >👑 Automatic Subtitles Generator</a
-        >
-        <div class="divider lg:divider-horizontal"></div>
-        <a
-          href="premium_tools/QR-generator.html"
-          rel="noopener noreferrer"
-          class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >👑 QR Code Generator</a
-        >
-      </div>
+        <!-- single 3 column row -->
+        <div class="flex flex-col w-full lg:flex-row px-5 my-10">
+          <a
+            href="premium_tools/image-to-text-converter.html"
+            rel="noopener noreferrer"
+            class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+            >👑 Image To Text Converter</a
+          >
+          <div class="divider lg:divider-horizontal"></div>
+          <a
+            href="premium_tools/subtitle-generator.html"
+            rel="noopener noreferrer"
+            class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+            >👑 Automatic Subtitles Generator</a
+          >
+          <div class="divider lg:divider-horizontal"></div>
+          <a
+            href="premium_tools/QR-generator.html"
+            rel="noopener noreferrer"
+            class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+            >👑 QR Code Generator</a
+          >
+        </div>
 
-      <!-- single 3 column row -->
-      <div class="flex flex-col w-full lg:flex-row px-5 my-10">
-        <a
-          href="free_tools/ISS-location-checker.html"
-          rel="noopener noreferrer"
-          class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >ISS location checker</a
-        >
-        <div class="divider lg:divider-horizontal"></div>
-        <a
-          href=""
-          rel="noopener noreferrer"
-          class="btn btn-outline btn-disabled flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >Coming Soon...</a
-        >
+        <!-- single 3 column row -->
+        <div class="flex flex-col w-full lg:flex-row px-5 mt-10 mb-6">
+          <a
+            href="free_tools/ISS-location-checker.html"
+            rel="noopener noreferrer"
+            class="btn btn-outline flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+            >ISS location checker</a
+          >
+          <div class="divider lg:divider-horizontal"></div>
+          <a
+            href=""
+            rel="noopener noreferrer"
+            class="btn btn-outline btn-disabled flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+            >Coming Soon...</a
+          >
 
-        <div class="divider lg:divider-horizontal"></div>
-        <a
-          href=""
-          rel="noopener noreferrer"
-          class="btn btn-outline btn-disabled flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
-          >Coming Soon...</a
-        >
+          <div class="divider lg:divider-horizontal"></div>
+          <a
+            href=""
+            rel="noopener noreferrer"
+            class="btn btn-outline btn-disabled flex-grow grid h-20 card bg-base-300 rounded-box place-items-center"
+            >Coming Soon...</a
+          >
+        </div>
       </div>
     </div>
 
     <!-- Pricing -->
-    <div id="pricing" class="bg-base-200">
-      <div id="tools" class="divider text-primary text-2xl bg-base-200 pt-5">
+    <div
+      id="pricing"
+      class="bg-base-200 pt-1 pb-4 px-2 m-5 lg:px-5 lg:m-10 rounded-xl"
+      data-theme="synthwave"
+    >
+      <div id="tools" class="divider text-primary text-2xl bg-base-200">
         Pricing
       </div>
       <div
-        class="stats stats-vertical bg-base-200 min-w-full lg:stats-horizontal shadow"
+        class="stats stats-vertical bg-base-200 min-w-full lg:stats-horizontal"
       >
         <div class="stat">
           <div class="stat-title">Free</div>
@@ -284,23 +291,62 @@
           <div class="stat-desc text-sm">+ Montlhy API calls: 100</div>
         </div>
 
-        <div class="stat">
+        <div class="stat" data-theme="luxury">
           <div class="stat-title">👑 Unlimited</div>
           <div class="stat-value">
             Rs. 50 <span class="text-sm font-light align-middle">/ month</span>
           </div>
-          <div class="stat-desc text-sm">
+          <div class="stat-desc text-sm lg:text-lg">
             ++ Monthly File Transfer Limit: Unlimited
           </div>
-          <div class="stat-desc text-sm">++ Montlhy API calls: Unlimited</div>
+          <div class="stat-desc text-sm lg:text-lg">
+            ++ Montlhy API calls: Unlimited
+          </div>
         </div>
       </div>
     </div>
 
     <!-- About -->
-    <!-- <div id="about" class="bg-base-100">
-      
-
-    </div> -->
+    <div
+      id="about"
+      class="bg-base-100 p-1 m-5 lg:m-10 rounded-xl"
+      data-theme="cyberpunk"
+    >
+      <div id="tools" class="divider text-primary text-2xl bg-base-100">
+        About
+      </div>
+      <div class="hero min-h-fit bg-base-100">
+        <div class="hero-content text-center">
+          <div class="max-w-screen-md">
+            <p class="py-3">
+              Qtools is an open-source project, with both the website and API
+              released under the
+              <em><code>BSD 3-Clause License</code></em>
+              on
+              <a
+                href="https://github.com/HarshRaj2717/Qtools"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link link-primary"
+                >GitHub</a
+              >. I am also open to contributions, so feel free to start an issue
+              or open a PR.
+            </p>
+            <h1 class="text-lg font-semibold py-3">
+              Designed & Built with ❤️ by
+              <span
+                ><a
+                  class="btn btn-secondary btn-sm"
+                  href="https://hraj.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><u>Harsh Raj</u></a
+                >
+              </span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
