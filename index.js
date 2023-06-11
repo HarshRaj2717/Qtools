@@ -16,10 +16,6 @@ app.get("/api", (req, res) => {
   res.render("api");
 });
 
-app.get("*", (req, res) => {
-  res.render("404");
-});
-
 // 404 page
 app.use((req, res, next) => {
   res.status(404);
