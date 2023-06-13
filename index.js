@@ -19,19 +19,7 @@ app.get("/api", (req, res) => {
 // 404 page
 app.use((req, res, next) => {
   res.status(404);
-
-  // respond with html page
-  if (req.accepts("html")) {
-    res.render("404");
-  }
-
-  // respond with json
-  if (req.accepts("json")) {
-    res.json({ error: "404" });
-  }
-
-  // default to plain-text. send()
-  res.type("txt").send("404");
+  res.render("404");
 });
 
 app.listen(3000);
