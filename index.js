@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -22,4 +23,6 @@ app.use((req, res, next) => {
   res.render("404");
 });
 
-app.listen(3000);
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
