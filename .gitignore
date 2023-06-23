@@ -102,6 +102,7 @@ public/styles/output.css
 .vuepress/dist
 
 # vuepress v2.x temp and cache directory
+temp
 .temp
 .cache
 
