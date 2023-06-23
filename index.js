@@ -2,6 +2,7 @@ const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const app = express();
 const PORT = process.env.PORT || 3000;
+const CONFIG = require("./config.json");
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -16,8 +17,12 @@ app.get("/login", (req, res) => {
   res.render("login", { pageTitle: "Login" });
 });
 
+app.get("/register", (req, res) => {
+  res.render("register", { pageTitle: "Register" });
+});
+
 app.get("/api", (req, res) => {
-  res.render("api", { pageTitle: "API" });
+  res.redirect(CONFIG.apiSiteLink);
 });
 
 app.get("/tools", (req, res) => {
