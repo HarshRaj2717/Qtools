@@ -1,0 +1,37 @@
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="text-center lg:text-left p-5">
+      <h1 class="text-5xl font-bold">Verify your account!</h1>
+      <p class="py-6">
+        Just one last step! Enter the verification code sent on your email.
+      </p>
+    </div>
+    <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <div class="card-body">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Enter verification code</span>
+          </label>
+          <input
+            type="text"
+            placeholder="XXXXXX"
+            class="input input-bordered"
+            maxlength="6"
+            onkeypress="return isNumberKey(event)"
+          />
+        </div>
+        <div class="form-control mt-6">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function isNumberKey(evt) {
+    var charCode = evt.which ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+    return true;
+  }
+</script>

@@ -21,6 +21,10 @@ app.get("/register", (req, res) => {
   res.render("register", { pageTitle: "Register" });
 });
 
+app.get("/verify", (req, res) => {
+  res.render("verify", { pageTitle: "Verify Mail" });
+});
+
 app.get("/api", (req, res) => {
   res.redirect(CONFIG.apiSiteLink);
 });
