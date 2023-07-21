@@ -14,9 +14,11 @@
             <span class="label-text">Email</span>
           </label>
           <input
+            id="register_email"
             type="email"
             placeholder="email"
             class="input input-bordered"
+            autofocus
           />
         </div>
         <div class="form-control">
@@ -24,6 +26,7 @@
             <span class="label-text">Password</span>
           </label>
           <input
+            id="register_pass"
             type="password"
             placeholder="password"
             class="input input-bordered"
@@ -34,13 +37,14 @@
             <span class="label-text">Confirm Password</span>
           </label>
           <input
+            id="register_pass_2"
             type="password"
             placeholder="confirm password"
             class="input input-bordered"
           />
         </div>
         <div class="form-control mt-6">
-          <button class="btn btn-primary">Create Account</button>
+          <button id="create-account-btn" class="btn btn-primary" onclick="callRegister()">Create Account</button>
           <div class="divider text-sm">OR</div>
           <a class="btn btn-outline" href="/login">Login</a>
         </div>

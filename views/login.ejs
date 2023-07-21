@@ -13,13 +13,19 @@
           <label class="label">
             <span class="label-text">Email</span>
           </label>
-          <input type="text" placeholder="email" class="input input-bordered" />
+          <input
+            id="login_email"
+            type="text"
+            placeholder="email"
+            class="input input-bordered"
+          />
         </div>
         <div class="form-control">
           <label class="label">
             <span class="label-text">Password</span>
           </label>
           <input
+            id="login_pass"
             type="text"
             placeholder="password"
             class="input input-bordered"
@@ -31,7 +37,7 @@
           </label>
         </div>
         <div class="form-control mt-6">
-          <button class="btn btn-primary">Login</button>
+          <button class="btn btn-primary" onclick="callLogin()">Login</button>
           <div class="divider text-sm">OR</div>
           <a class="btn btn-outline" href="/register">Create Account</a>
         </div>
