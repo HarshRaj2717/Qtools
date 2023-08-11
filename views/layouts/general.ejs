@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="winter">
   <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <% if (pageTitle === '') { %>
-      <title>Qtools</title>
-      <% } else { %>
-      <title><%= pageTitle %> | Qtools</title>
-      <% } %>
-      <link rel="stylesheet" href="/styles/output.css" />
-      <script src="/js/helpers.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
-      <link
-        rel="shortcut icon"
-        href="/images/favicon.png"
-        type="image/x-icon"
-      />
-    </head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <% if (pageTitle === '') { %>
+    <title>Qtools</title>
+    <% } else { %>
+    <title><%= pageTitle %> | Qtools</title>
+    <% } %>
+    <link rel="stylesheet" href="/styles/output.css" />
+    <script src="/js/helpers.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <!-- Navbar -->
