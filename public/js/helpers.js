@@ -4,6 +4,24 @@ function isNumberKey(evt) {
   return true;
 }
 
+function accountCheck() {
+  var navbar_login_buttons = document.getElementsByClassName(
+    "navbar-login-button"
+  );
+
+  if (
+    localStorage.getItem("email") != "" &&
+    localStorage.getItem("api_token") != "" &&
+    localStorage.getItem("email") != undefined &&
+    localStorage.getItem("api_token") != undefined
+  ) {
+    Array.from(navbar_login_buttons).forEach((cur_button) => {
+      cur_button.textContent = localStorage.getItem("email").split("@")[0];
+      cur_button.href = "/account";
+    });
+  }
+}
+
 function showErrorDialog(description) {
   const divElement = document.createElement("div");
   divElement.className = "alert alert-error max-w-fit fixed bottom-5 right-5";
@@ -25,32 +43,35 @@ const validateEmail = (email) => {
 };
 
 async function callRegister() {
-  email = document.getElementById("register_email");
-  pass = document.getElementById("register_pass");
-  pass_2 = document.getElementById("register_pass_2");
+  var email = document.getElementById("register_email");
+  const email_text = email.value;
+  var pass = document.getElementById("register_pass");
+  const pass_text = pass.value;
+  var pass_2 = document.getElementById("register_pass_2");
+  const pass_2_text = pass_2.value;
 
-  if (String(email.value).trim() == "" || !validateEmail(String(email.value))) {
+  if (String(email_text).trim() == "" || !validateEmail(String(email_text))) {
     email.value = "";
     email.classList.add("input-error");
     email.focus();
     return;
   } else email.classList.remove("input-error");
 
-  if (String(pass.value).trim() == "" || String(pass.value).trim().length < 8) {
+  if (String(pass_text).trim().length < 8) {
     pass.value = "";
     pass.classList.add("input-error");
     pass.focus();
     return;
   } else pass.classList.remove("input-error");
 
-  if (String(pass_2.value).trim() == "") {
+  if (String(pass_2_text).trim().length < 8) {
     pass_2.value = "";
     pass_2.classList.add("input-error");
     pass_2.focus();
     return;
   } else pass_2.classList.remove("input-error");
 
-  if (pass.value != pass_2.value) {
+  if (pass_text != pass_2_text) {
     pass.value = "";
     pass.classList.add("input-error");
     pass_2.value = "";
@@ -63,7 +84,7 @@ async function callRegister() {
   }
 
   const api_res = await fetch(
-    `/__api/register/?email=${email.value}&password=${pass.value}`
+    `/__api/register/?email=${email_text}&password=${pass_text}`
   );
   const api_data = await api_res.json();
 
@@ -73,8 +94,94 @@ async function callRegister() {
   }
 
   if (api_data.success == 1) {
+    localStorage.setItem("email", email_text);
+    if (api_data.redirect != undefined) {
+      window.location.replace(api_data.redirect);
+    }
+    return;
+  } else {
+    showErrorDialog(api_data.message);
+    if (api_data.redirect != undefined) {
+      window.location.replace(api_data.redirect);
+    }
+  }
+}
+
+async function callVerify() {
+  const email_text = localStorage.getItem("email");
+  if (!validateEmail(String(email_text))) {
+    window.location.replace("/register");
+  }
+
+  var otp = document.getElementById("otp-input");
+  const otp_text = otp.value;
+  if (String(otp_text).trim().length != 6) {
+    otp.value = "";
+    otp.classList.add("input-error");
+    otp.focus();
+    return;
+  } else otp.classList.remove("input-error");
+
+  const api_res = await fetch(
+    `/__api/verify/?email=${email_text}&otp=${otp_text}`
+  );
+  const api_data = await api_res.json();
+
+  if (api_data.error == 1) {
+    showErrorDialog("An error occured!");
+    return;
+  }
+
+  if (api_data.success == 1) {
+    localStorage.setItem("api_token", api_data.api_token);
+    accountCheck();
+    if (api_data.redirect != undefined) {
+      window.location.replace(api_data.redirect);
+    }
+    return;
+  } else {
+    showErrorDialog(api_data.message);
+    if (api_data.redirect != undefined) {
+      window.location.replace(api_data.redirect);
+    }
+  }
+}
+
+async function callLogin() {
+  var email = document.getElementById("login_email");
+  const email_text = email.value;
+  var pass = document.getElementById("login_pass");
+  const pass_text = pass.value;
+
+  if (String(email_text).trim() == "" || !validateEmail(String(email_text))) {
+    email.value = "";
+    email.classList.add("input-error");
+    email.focus();
+    return;
+  } else email.classList.remove("input-error");
+
+  if (String(pass_text).trim() == "" || String(pass_text).trim().length < 8) {
+    pass.value = "";
+    pass.classList.add("input-error");
+    pass.focus();
+    return;
+  } else pass.classList.remove("input-error");
+
+  const api_res = await fetch(
+    `/__api/login/?email=${email_text}&password=${pass_text}`
+  );
+  const api_data = await api_res.json();
+
+  if (api_data.error == 1) {
+    showErrorDialog("An error occured!");
+    return;
+  }
+
+  if (api_data.success == 1) {
+    localStorage.setItem("email", email_text);
     if (api_data.api_token != undefined) {
-      console.log(api_token);
+      localStorage.setItem("api_token", api_data.api_token);
+      accountCheck();
     }
     if (api_data.redirect != undefined) {
       window.location.replace(api_data.redirect);
@@ -82,24 +189,15 @@ async function callRegister() {
     return;
   } else {
     showErrorDialog(api_data.message);
+    if (api_data.redirect != undefined) {
+      window.location.replace(api_data.redirect);
+    }
   }
 }
 
-function callLogin() {
-  email = document.getElementById("login_email");
-  pass = document.getElementById("login_pass");
-
-  if (String(email.value).trim() == "" || !validateEmail(String(email.value))) {
-    email.value = "";
-    email.classList.add("input-error");
-    email.focus();
-    return;
-  } else email.classList.remove("input-error");
-
-  if (String(pass.value).trim() == "" || String(pass.value).trim().length < 8) {
-    pass.value = "";
-    pass.classList.add("input-error");
-    pass.focus();
-    return;
-  } else pass.classList.remove("input-error");
+async function logout() {
+  localStorage.removeItem("email");
+  localStorage.removeItem("api_token");
+  accountCheck();
+  window.location.replace('/')
 }

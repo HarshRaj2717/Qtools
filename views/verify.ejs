@@ -13,6 +13,7 @@
             <span class="label-text">Enter verification code</span>
           </label>
           <input
+            id="otp-input"
             type="text"
             placeholder="XXXXXX"
             class="input input-bordered"
@@ -21,7 +22,7 @@
           />
         </div>
         <div class="form-control mt-6">
-          <button class="btn btn-primary">Submit</button>
+          <button id="verify-submit-btn" class="btn btn-primary" onclick="callVerify()">Submit</button>
         </div>
       </div>
     </div>

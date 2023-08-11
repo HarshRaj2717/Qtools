@@ -55,7 +55,7 @@
               <a
                 href="/login"
                 rel="noopener noreferrer"
-                class="btn btn-primary mx-1 btn-sm px-1 py-1 my-1 text-primary-content"
+                class="navbar-login-button btn btn-primary mx-1 btn-sm px-1 py-1 my-1 text-primary-content"
                 >Get Started</a
               >
             </li>
@@ -96,7 +96,7 @@
         <a
           href="/login"
           rel="noopener noreferrer"
-          class="btn btn-primary mx-1 btn-xs hidden lg:btn-sm lg:flex"
+          class="navbar-login-button btn btn-primary mx-1 btn-xs hidden lg:btn-sm lg:flex"
           >Get Started</a
         >
 
@@ -197,6 +197,11 @@
     <!-- Finding current year and writing it to the footer's copyright text -->
     <script>
       document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Checking user log-in status -->
+    <script>
+      accountCheck();
     </script>
 
     <!-- Logging "about me" to browser's console -->

@@ -21,9 +21,63 @@ router.get("/register", async (req, res) => {
       console.log(api_data.description);
       res.json({ error: 1 });
       return;
+    } else {
+      res.json(api_data);
     }
+  } catch (error) {
+    console.log(error);
+    res.json({ error: 1 });
+    return;
+  }
+});
 
-    res.json(api_data);
+router.get("/verify", async (req, res) => {
+  try {
+    const email = req.query.email;
+    const otp = req.query.otp;
+    if (email == undefined || otp == undefined) {
+      res.json({ error: 1 });
+      return;
+    }
+    const api_res = await fetch(
+      `${api_domain}/${frontend_secret_key}/register/?email=${email}&code=${otp}`
+    );
+    const api_data = await api_res.json();
+
+    if (!api_res.ok) {
+      console.log(api_data.description);
+      res.json({ error: 1 });
+      return;
+    } else {
+      res.json(api_data);
+    }
+  } catch (error) {
+    console.log(error);
+    res.json({ error: 1 });
+    return;
+  }
+});
+
+router.get("/login", async (req, res) => {
+  try {
+    const email = req.query.email;
+    const password = req.query.password;
+    if (email == undefined || password == undefined) {
+      res.json({ error: 1 });
+      return;
+    }
+    const api_res = await fetch(
+      `${api_domain}/${frontend_secret_key}/login/?email=${email}&password=${password}`
+    );
+    const api_data = await api_res.json();
+
+    if (!api_res.ok) {
+      console.log(api_data.description);
+      res.json({ error: 1 });
+      return;
+    } else {
+      res.json(api_data);
+    }
   } catch (error) {
     console.log(error);
     res.json({ error: 1 });
