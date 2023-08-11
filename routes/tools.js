@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/image-resizer", (req, res) => {
-  // API call to check if token is required for this API or not
-  // If token required then render login page
   res.render("tools-page", {
     pageTitle: "Image Resizer",
     toolDescription: "Resize all your images to custom dimensions with ease!",
@@ -18,8 +16,6 @@ router.get("/image-resizer", (req, res) => {
 });
 
 router.get("/generate-text-from-audio", (req, res) => {
-  // API call to check if token is required for this API or not
-  // If token required then render login page
   res.render("tools-page", {
     pageTitle: "Generate Text From Audio",
     toolDescription: "Generate audio from text with ease!",
@@ -30,8 +26,6 @@ router.get("/generate-text-from-audio", (req, res) => {
 });
 
 router.get("/video-to-mp3-converter", (req, res) => {
-  // API call to check if token is required for this API or not
-  // If token required then render login page
   res.render("tools-page", {
     pageTitle: "Video To MP3 Converter",
     toolDescription: "Convert video files to MP3 (audio) files with ease!",
@@ -42,8 +36,6 @@ router.get("/video-to-mp3-converter", (req, res) => {
 });
 
 router.get("/extract-text-from-image", (req, res) => {
-  // API call to check if token is required for this API or not
-  // If token required then render login page
   res.render("tools-page", {
     pageTitle: "Extract Text From Image",
     toolDescription: "Extract text from images with accuracy & ease!",
@@ -54,8 +46,6 @@ router.get("/extract-text-from-image", (req, res) => {
 });
 
 router.get("/extract-text-from-video", (req, res) => {
-  // API call to check if token is required for this API or not
-  // If token required then render login page
   res.render("tools-page", {
     pageTitle: "Extract text from video",
     toolDescription: "Extract all text from videos with ease!",
@@ -68,8 +58,6 @@ router.get("/extract-text-from-video", (req, res) => {
 });
 
 router.get("/QR-generator", (req, res) => {
-  // API call to check if token is required for this API or not
-  // If token required then render login page
   res.render("tools-page", {
     pageTitle: "QR Code Generator",
     toolDescription: "Generate QR code of any text/URL with ease!",

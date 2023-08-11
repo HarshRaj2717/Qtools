@@ -3,6 +3,7 @@ const expressLayouts = require("express-ejs-layouts");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const CONFIG = require("./config.json");
+require("dotenv").config({ path: "./.env" });
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -28,6 +29,9 @@ app.get("/verify", (req, res) => {
 app.get("/api", (req, res) => {
   res.redirect(CONFIG.apiSiteLink);
 });
+
+const apiRouter = require("./routes/__api");
+app.use("/__api", apiRouter);
 
 app.get("/tools", (req, res) => {
   res.redirect("/#tools");
