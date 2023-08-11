@@ -83,10 +83,16 @@ async function callRegister() {
     pass_2.classList.remove("input-error");
   }
 
+  document
+    .getElementById("register-button")
+    .classList.add("loading", "loading-spinner", "btn-disabled");
   const api_res = await fetch(
     `/__api/register/?email=${email_text}&password=${pass_text}`
   );
   const api_data = await api_res.json();
+  document
+    .getElementById("register-button")
+    .classList.remove("loading", "loading-spinner", "btn-disabled");
 
   if (api_data.error == 1) {
     showErrorDialog("An error occured!");
@@ -122,10 +128,16 @@ async function callVerify() {
     return;
   } else otp.classList.remove("input-error");
 
+  document
+    .getElementById("verify-btn")
+    .classList.add("loading", "loading-spinner", "btn-disabled");
   const api_res = await fetch(
     `/__api/verify/?email=${email_text}&otp=${otp_text}`
   );
   const api_data = await api_res.json();
+  document
+    .getElementById("verify-btn")
+    .classList.remove("loading", "loading-spinner", "btn-disabled");
 
   if (api_data.error == 1) {
     showErrorDialog("An error occured!");
@@ -167,10 +179,16 @@ async function callLogin() {
     return;
   } else pass.classList.remove("input-error");
 
+  document
+    .getElementById("login-button")
+    .classList.add("loading", "loading-spinner", "btn-disabled");
   const api_res = await fetch(
     `/__api/login/?email=${email_text}&password=${pass_text}`
   );
   const api_data = await api_res.json();
+  document
+    .getElementById("login-button")
+    .classList.remove("loading", "loading-spinner", "btn-disabled");
 
   if (api_data.error == 1) {
     showErrorDialog("An error occured!");
@@ -199,5 +217,5 @@ async function logout() {
   localStorage.removeItem("email");
   localStorage.removeItem("api_token");
   accountCheck();
-  window.location.replace('/')
+  window.location.replace("/");
 }
