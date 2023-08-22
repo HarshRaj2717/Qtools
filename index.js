@@ -3,13 +3,27 @@ const expressLayouts = require("express-ejs-layouts");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const CONFIG = require("./config.json");
+const cors = require("cors");
 require("dotenv").config({ path: "./.env" });
 
+const corOptions = {
+  origin: function (origin, callback) {
+    if (!origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+
+// Middlewares
+app.use(cors(corOptions));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(expressLayouts);
 app.set("layout", "./layouts/general");
 
+// Routes
 app.get("/", (req, res) => {
   res.render("index", { pageTitle: "" });
 });
